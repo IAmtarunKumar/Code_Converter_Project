@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Converter</title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJjlEOgjrmKB1ZRS6EnJaHkulR1Ra_bFFH1A&usqp=CAU" type="image/x-icon">
+</head>
+<!-- fontosm cdn link  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.head{
+    text-align: center;
+    background-color:rgb(7, 33, 16) ;
+    color: white;
+    margin: 0px;
+    padding: 10px;
+    border: 2px dotted white;
+}
+.top{
+    width: 80%;
+    height: 100vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    
+    background-color: rgb(7, 33, 16);
+}
+.nav{
+    padding-top: 10px;
+}
+
+textarea{
+    border: 8px solid gray;
+    width: 40%;
+    height: 500px;
+    margin: 5px;
+    font-size: 20px;
+    background-color: rgb(6, 84, 6);
+    color: white;
+    padding: 10px;
+    overflow: auto;
+
+}
+#output{
+    border: 8px solid gray;
+    width: 60%;
+    height: 500px;
+    margin: 5px;
+    font-size: 20px;
+    background-color: rgb(6, 84, 6);
+    color: white;
+    padding: 10px;
+    overflow: auto;
+}
+
+select{
+    margin: 10px;
+    padding: 10px;
+    width: 340px;
+    font-size: 25px;
+    background-color: rgb(71, 71, 206);
+    color: white;
+    border-radius: 10px;
+
+}
+option{
+    background-color: rgb(3, 3, 56);
+}
+.btn{
+    margin: 10px 10px 10px 40px;
+    padding: 10px;
+    font-size: 25px;
+    background-color: rgb(13, 13, 56);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 230px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(227, 138, 138, 0.3) 0px 18px 36px -18px inset;
+}
+.btn:hover{
+    background-color: rgb(33, 33, 110);
+}
+#copy-button{
+    position: absolute;
+    top: 660px;
+    left: 85%;
+
+    padding: 5px 10px;
+  background-color: black;
+    border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+   
+
+}
+
+
+
+#copy-button:hover {
+  background-color: #10072d;
+  color: green;
+}
+
+
+</style>
+<body>
+    
+  
+ 
+   
+    <div class="top">
+    
+        <h1 class="head">Code Converter</h1>
+        
+    <div class="nav">
+      
+    <select name="" id="lang">
+        <option value="">Select Your Language</option>
+        <option value="Java">Java</option>
+        <option value="Go">Go</option>
+        <option value="Javascript">Javascript</option>
+        <option value="C++">C++</option>
+        <option value="C#">C#</option>
+        <option value="C">C</option>
+        <option value="TypeScript">TypeScript</option>
+        <option value="Swift">Swift</option>
+        <option value="Kotlin">Kotlin</option>
+        <option value="PHP">PHP</option>
+        <option value="Ruby">Ruby</option>
+    </select>
+
+    <button class="btn" id="debug">Debug</button>
+
+    <button class="btn" id="quality">Quality Check</button>
+
+    <button class="btn" id="convert">Convert</button>
+
+</div>
+  <br>
+
+  <div style="display: flex;">
+    <textarea name="" id="inputbox" placeholder="Enter Your Code....." ></textarea>
+    <span id="output">
+       
+    </span>
+</div>
+<button id="copy-button"><i class="fas fa-copy fa-2x"></i></button>
+    
+   
+ 
+</div>
+
+
+
+</body>
+</html>
+
+
+<script src="./script.js"></script>
