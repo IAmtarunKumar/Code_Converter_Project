@@ -7,7 +7,7 @@ let debug = document.querySelector("#debug");
 let quality = document.querySelector("#quality");
 
 
-
+let url = "https://code-converter-project-backend.onrender.com"
 
 //convert
 convert.addEventListener("click", async () => {
@@ -22,7 +22,7 @@ convert.addEventListener("click", async () => {
     console.log(obj);
 
     try {
-      let res = await fetch("http://localhost:4000/convert", {
+      let res = await fetch(`${url}/convert`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(obj),
@@ -53,7 +53,7 @@ debug.addEventListener("click", async () => {
     console.log(obj);
 
     try {
-      let res = await fetch("http://localhost:4000/debug", {
+      let res = await fetch(`${url}/debug`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(obj),
@@ -84,7 +84,7 @@ quality.addEventListener("click", async () => {
     console.log(obj);
 
     try {
-      let res = await fetch("http://localhost:4000/quality", {
+      let res = await fetch(`${url}/quality`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(obj),
